@@ -198,6 +198,7 @@ html {
   padding: 1.182em; 
   text-rendering: optimizeLegibility;
   text-align: center;
+  background-color: #F0F0F0;
 }
 
 label {
@@ -215,12 +216,16 @@ input {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-  background-color: #DDD;
+  background-color: #D3D3D3;
 }
 
 #input-submit, #input-age-verification, #input-email {
   width: 50%;
   margin: auto;
+}
+
+input[type="submit"] {
+	background-color: #909090;
 }
 
 input[type="checkbox"] {
@@ -231,6 +236,12 @@ input[type="checkbox"] {
   -moz-transform: scale(1.2); 
   -webkit-transform: scale(1.2); 
   -o-transform: scale(1.2);
+}
+
+@media screen and (min-width: 480px) {
+	body, html {
+	min-height:100%;
+	}
 }
 
 label + input[type="email"] {
