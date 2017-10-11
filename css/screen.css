@@ -192,10 +192,12 @@ img, audio, video {
 */
 
 html {
-  font-size: 1.375em; /* 22px */
-  line-height: 1.182em; /* 26px / ~ 120% */
-  padding: 1.182em; /* 26px / ~ 120% */
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.375em; 
+  line-height: 1.182em; 
+  padding: 1.182em; 
   text-rendering: optimizeLegibility;
+  text-align: center;
 }
 
 label {
@@ -203,8 +205,84 @@ label {
 }
 
 /* ===== LAYOUT STYLES ====== */
+input {
+  box-sizing: border-box;
+  width: 70%;
+  height: 78px;
+  padding: 26px;
+  border: 0;
+  border-radius: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  background-color: #DDD;
+}
+
+#input-submit, #input-age-verification, #input-email {
+  width: 50%;
+  margin: auto;
+}
+
+input[type="checkbox"] {
+  width: auto;
+  height: auto;
+  float: left;
+  -ms-transform: scale(1.2); 
+  -moz-transform: scale(1.2); 
+  -webkit-transform: scale(1.2); 
+  -o-transform: scale(1.2);
+}
+
+label + input[type="email"] {
+  display: inline;
+}
+
+input[type="checkbox"] + label {
+  display: inline;
+}
 
 /* ===== MODULAR STYLES ===== */
+form li {
+  padding: 0.5em; 
+}
+
+#age-label {
+  padding-left: 0.5em;
+}
+
+#alt-box {
+  float: left;
+  height: 1em;
+  width: 1em;
+  background-color: #DDD;
+  border: 2px solid #8a8a8a;
+  border-radius: 4px;
+}
+
+p, h1 {
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 0.5em;
+}
 
 /* ===== STATE STYLES ======= */
+/*.hasjs class will only exist if js runs*/
+.hasjs #input-email {
+  position: relative;
+}
 
+.hasjs #input-email label {
+  transition: top 1s;
+  top: 26px;
+  left: 20px;
+  position: absolute;
+}
+
+.hasjs #input-email label.active {
+  top: -25px;
+}
+
+.hasjs #age-verification {
+  position: left; 
+  left: 6000px;
+}
